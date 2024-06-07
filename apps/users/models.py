@@ -6,7 +6,7 @@ from django.core.validators import RegexValidator
 phone_regex = RegexValidator(regex=r'\+996\d{9}$', message='Телефон должен начинаться с +996')
 
 class User(AbstractUser):
-    phone = models.CharField(
+    phone = models.PositiveIntegerField(
         max_length=255, 
         verbose_name='Телефон'
 
